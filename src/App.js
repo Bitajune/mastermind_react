@@ -9,26 +9,17 @@ const colors = ["#7CCCE5", "#FDE47F", "#E04644", "#B576AD"];
 
 class App extends Component {
   constructor() {
-    // super must be called before accessing 'this'
     super();
-    // state is an object that holds information
-    // in its properties
     this.state = {
       selColorIdx: 0,
-      guesses: [
-        this.getNewGuess(),
-        this.getNewGuess(),
-        this.getNewGuess(),
-        this.getNewGuess()
-      ],
+      guesses: [this.getNewGuess()],
       code: this.genCode()
     };
   }
 
   getNewGuess() {
     return {
-      // code: [null, null, null, null],
-      code: [3, 2, 1, 0], // for testing purposes
+      code: [null, null, null, null],
       score: {
         perfect: 0,
         almost: 0
@@ -41,11 +32,14 @@ class App extends Component {
   }
 
   getWinTries() {
-    // if winner, return num guesses, otherwise 0 (no winner)
     let lastGuess = this.state.guesses.length - 1;
     return this.state.guesses[lastGuess].score.perfect === 4
       ? lastGuess + 1
       : 0;
+  }
+
+  handleColorSelection() {
+    alert("color selected!");
   }
 
   render() {
