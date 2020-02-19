@@ -5,7 +5,7 @@ import ColorPicker from "./components/ColorPicker/ColorPicker";
 import GameTimer from "./components/GameTimer/GameTimer";
 import NewGameButton from "./components/NewGameButton/NewGameButton";
 
-const colors = ["#7CCCE5", "#FDE47F", "#E04644", "#B576AD"];
+const colors = ["#531B3A", "#7D233C", "#9C640C", "#D9B521"];
 
 class App extends Component {
   constructor() {
@@ -45,7 +45,7 @@ class App extends Component {
   render() {
     let winTries = this.getWinTries();
     return (
-      <div className="App">
+      <div id="board" className="App">
         <header className="App-header-footer">
           R E A C T &nbsp;&nbsp;&nbsp; M A S T E R M I N D
         </header>

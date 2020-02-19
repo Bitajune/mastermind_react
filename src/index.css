@@ -27,3 +27,14 @@ button:focus,
 .btn:focus {
   outline: none;
 }
+
+#board {
+  border: 1px solid black;
+  margin: 50px;
+  padding: 4px;
+  background-color: white;
+}
+
+html {
+  background-color: rgb(226, 224, 224);
+}
